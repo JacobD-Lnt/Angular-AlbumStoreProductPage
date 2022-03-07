@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./product-description.component.css']
 })
 export class ProductDescriptionComponent implements OnInit {
-  private albumInfo;
+  albumInfo;
 
   constructor(private _productService: ProductService) { }
 
