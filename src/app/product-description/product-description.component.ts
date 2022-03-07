@@ -9,12 +9,14 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./product-description.component.css']
 })
 export class ProductDescriptionComponent implements OnInit {
-  private albumInfo = null;
+  private albumInfo;
 
   constructor(private _productService: ProductService) { }
 
   ngOnInit() {
-    this._productService.getAlbum(1).subscribe(response => this.albumInfo = response);
+    this._productService.getAlbum(1).subscribe(
+      response => this.albumInfo = response
+      );
   }
 
 }
