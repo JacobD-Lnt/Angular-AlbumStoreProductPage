@@ -12,6 +12,6 @@ export class ProductService {
 
   public getAlbum(id: number)
   {
-    return this._http.get(this._albumUrl).map(response => JSON.parse(JSON.stringify(response)).data);
+    return this._http.get(this._albumUrl).map(response => response);
   }
 }
